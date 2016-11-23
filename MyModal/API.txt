@@ -1,0 +1,27 @@
+author by yinqing 2016-11-23
+API:
+1、该插件是基于JQuery的（当前引入的是2.2.1版本的）
+2、需要引入MyModal.js  和 MyModal.css 这两个文件  
+3、用法：以单击某按钮为例
+	$("#button_id").on("click",function(){
+	//title：可以不写，不写的时候 默认是“信息”
+	//content：内容 
+	// buttons 可以不写，不写的话，默认是一个 "取消"按钮，
+	//buttons 里面包含 buttons:["yes","no","cancel"]
+	//其中 cancel(取消)按钮的事件已经被定义好，点击就会关闭当前弹框
+	//而 yes(是)  或者 no(否)  的事件会返回  在返回函数里处理，注：buttons 里面根据自己需求填写按钮
+		$(document.body).myModal({
+			title:'标题', 		
+  			content:"这里是内容", 	
+  			buttons:["yes","no","cancel"]		
+		},function(result){
+			//如果按钮 有  yes/no 的时候，有返回值，返回的就是一个对象；cancel 按钮没有返回，直接就是关闭弹框
+			//result 内容为：
+			 result = {
+            		"btn":"",//返回的是"yes"或"no"
+            		"obj":"",//这是当前弹框的对象（最外层对象，含模态层）
+            		"params":""//这是弹窗的对象
+            	}
+			//关闭改弹窗，需要调用  result.obj.closeDialog(result.params);
+		});
+	})

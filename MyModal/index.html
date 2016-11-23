@@ -6,14 +6,14 @@
     <link rel="stylesheet" type="text/css" href="css/MyModal.css"/>
   </head>
   <body>
-  	<button onclick="ccFn()"> 点击出现模态框</button>
+  	<button onclick="clickFn()"> 点击出现模态框</button>
       <script src="./lib/jquery.min.js" charset="utf-8"></script>
       <script src="js/MyModal.js" type="text/javascript" charset="utf-8"></script>
       <script type="text/javascript">
-      	function ccFn(){
+      	function clickFn(){
       		$(document.body).myModal({
 //    			title:'',
-      			content:"是内点击出现模态框点击出现模态框点击出现模态框点击出现模态框点击出现模态框点击出现模态框点击出现模态框点击出现模态框点击出现模态框点击出现模态框容",
+      			content:"这里是内容",
       			buttons:["yes"],
       		},function(result){
       			if(result.btn=="no"){
