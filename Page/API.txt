@@ -1,0 +1,12 @@
+用法：
+该插件是基于JQuery的 所以除了引入page.css  page.js 外 还需要先引入JQuery
+S("#id").yqPage({
+		pages:5,//总页数
+		curr:1,//当前页
+		jumpOpen:false,//是否开启跳页 默认false  可以不填
+		style:1,//风格 1 是显示首尾页  2是不显示首尾页而是显示第一页和最后页的页码数  默认是风格1，即开启首尾页
+		jump:function(curr){//返回点击后的页码
+				//这里面做具体逻辑操作
+				console.log(curr);
+		}
+});

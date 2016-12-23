@@ -1,0 +1,71 @@
+@charset "utf-8";
+body,html,div,ul,li,a,span,label{
+	margin: 0;
+	padding: 0;
+}
+body,html {
+	height: 100%;
+	width: 100%;
+}
+.my-page > li {
+	list-style: none;
+	float: left;
+}
+.my-page > li > a {
+	text-decoration: none;
+	display: inline;
+	padding: 6px 12px;
+	margin-left: -1px;
+	line-height: 1.42857143;
+	color: #2a6496;
+	border: 1px solid #ddd;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.my-page > li > span {
+	display: inline-block;
+	padding: 6px 12px;
+	margin-left: -1px;
+}
+.my-page > li > a:hover {
+	position: relative;
+	cursor: pointer;
+	background-color: #eee;
+}
+.my-page > li.active > a {
+	z-index: 2;
+	color: #fff;
+	background-color: #428bca;
+}
+.my-page > li.disabled > a {
+	z-index: 2;
+	color: #2a6496;;
+	cursor: text;
+	background-color: #e6e6e6;
+}
+.my-page > li > a.hide {
+	display: none;
+}
+.jump-num {
+	width: 50px;
+	padding-left: 3px ;
+	margin-left: 4px;
+	margin-right: 2px;
+	line-height: 1.42857143;
+	border: 1px solid #ddd;
+}
+.jumpPageBtn {
+	margin-left: 5px;
+	padding: 1px 10px;
+	color: #666;
+	border: 1px solid #ccc;
+	background-color: #fff;
+}
+.page-label {
+	color: #666;
+}
+span.jump-page {
+	margin-left: 5px;
+	border: none;
+}
